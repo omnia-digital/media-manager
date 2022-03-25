@@ -7,6 +7,9 @@
 
 A TALL Stack Media Manager to upload media files to multiple storages or select image from Unsplash, URL
 
+https://user-images.githubusercontent.com/6707194/160046199-91dd3aa3-7687-4394-808e-18057cf5bdbc.mp4
+
+
 ## Installation
 
 You can install the package via composer:
