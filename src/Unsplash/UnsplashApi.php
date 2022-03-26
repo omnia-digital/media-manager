@@ -12,7 +12,7 @@ class UnsplashApi
     {
         HttpClient::init([
             'applicationId' => config('media-manager.unsplash.access_key'),
-            'utmSource'     => config('media-manager.unsplash.utm_source'),
+            'utmSource' => config('media-manager.unsplash.utm_source'),
         ]);
     }
 
