@@ -99,7 +99,7 @@ class MediaManager extends Component
 
             $this->file = Storage::disk($this->disk)->url($filePath);
         } else {
-            $this->file = $this->file->temporaryUrl();
+            $this->file = is_string($this->file) ? $this->file : $this->file->temporaryUrl();
         }
 
         $this->dispatchBrowserEvent('media-manager:file-selected', [
