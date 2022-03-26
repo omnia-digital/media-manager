@@ -35,9 +35,9 @@ class MediaManager extends Component
     public bool $handleUploadProcess = true;
 
     protected $listeners = [
-        'media-manager:show'         => 'showMediaManager',
+        'media-manager:show' => 'showMediaManager',
         'media-manager:file-removed' => 'handleFieRemoved',
-        'unsplash:selected'          => 'handleUnsplashSelected',
+        'unsplash:selected' => 'handleUnsplashSelected',
     ];
 
     public function mount(bool $handleUploadProcess = true)
@@ -48,7 +48,7 @@ class MediaManager extends Component
     public function updatedFile($value)
     {
         if ($value instanceof TemporaryUploadedFile) {
-            $this->whenFails(fn() => $this->reset('file'))->validate([
+            $this->whenFails(fn () => $this->reset('file'))->validate([
                 'file' => [
                     'mimes:' . implode(',', config('media-manager.image.allowed_file_types')),
                     'max:' . config('media-manager.image.max_file_size'),
@@ -103,9 +103,9 @@ class MediaManager extends Component
         }
 
         $this->dispatchBrowserEvent('media-manager:file-selected', [
-            'id'       => $this->childComponentId,
-            'url'      => $this->file,
-            'path'     => $filePath ?? $this->file,
+            'id' => $this->childComponentId,
+            'url' => $this->file,
+            'path' => $filePath ?? $this->file,
             'metadata' => $this->metadata,
         ]);
 
@@ -122,7 +122,7 @@ class MediaManager extends Component
         $this->childComponentData = $data;
         $this->file = $data['url'];
         $this->metadata = [
-            'alt'     => $data['alt'],
+            'alt' => $data['alt'],
             'caption' => $data['caption'],
         ];
     }
@@ -142,7 +142,7 @@ class MediaManager extends Component
     public function getTabOptionsProperty()
     {
         return [
-            'upload'   => 'Upload',
+            'upload' => 'Upload',
             'unsplash' => 'Unsplash',
             'from-url' => 'From URL',
         ];
