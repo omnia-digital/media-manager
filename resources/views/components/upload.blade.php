@@ -24,7 +24,7 @@
     id="file-drop"
     type="button"
 >
-    <x-coolicon-image-alt x-bind:class="{'text-gray-900': dropFiles, 'text-gray-600': !dropFiles}" class="mx-auto h-12 w-12"/>
+    <x-library::icons.icon name="fa fa-image" x-bind:class="{'text-gray-900': dropFiles, 'text-gray-600': !dropFiles}" class="mx-auto h-12 w-12"  />
     <p x-bind:class="{'text-gray-900': dropFiles, 'text-gray-600': !dropFiles}" class="mt-2 block text-sm font-medium">
         Drop your file here, or <span class="text-gray-900 font-semibold">Browse</span>.
     </p>
