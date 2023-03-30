@@ -1,9 +1,9 @@
 <?php
 
-namespace Phuclh\MediaManager;
+namespace Omnia\MediaManager;
 
 use Livewire\Livewire;
-use Phuclh\MediaManager\Unsplash\Unsplash;
+use Omnia\MediaManager\Unsplash\Unsplash;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

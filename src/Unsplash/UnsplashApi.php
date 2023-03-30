@@ -1,6 +1,6 @@
 <?php
 
-namespace Phuclh\MediaManager\Unsplash;
+namespace Omnia\MediaManager\Unsplash;
 
 use Unsplash\HttpClient;
 use Unsplash\PageResult;

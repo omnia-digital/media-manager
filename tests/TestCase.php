@@ -1,10 +1,10 @@
 <?php
 
-namespace Phuclh\MediaManager\Tests;
+namespace Omnia\MediaManager\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Phuclh\MediaManager\MediaManagerServiceProvider;
+use Omnia\MediaManager\MediaManagerServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Phuclh\\MediaManager\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Omnia\\MediaManager\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

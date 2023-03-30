@@ -1,9 +1,9 @@
 # Livewire Media Manager
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/phuclh/media-manager.svg?style=flat-square)](https://packagist.org/packages/phuclh/media-manager)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/phuclh/media-manager/run-tests?label=tests)](https://github.com/phuclh/media-manager/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/phuclh/media-manager/Check%20&%20fix%20styling?label=code%20style)](https://github.com/phuclh/media-manager/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/phuclh/media-manager.svg?style=flat-square)](https://packagist.org/packages/phuclh/media-manager)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/omnia-digital/media-manager.svg?style=flat-square)](https://packagist.org/packages/omnia-digital/media-manager)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/omnia-digital/media-manager/run-tests?label=tests)](https://github.com/omnia-digital/media-manager/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/omnia-digital/media-manager/Check%20&%20fix%20styling?label=code%20style)](https://github.com/omnia-digital/media-manager/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/omnia-digital/media-manager.svg?style=flat-square)](https://packagist.org/packages/omnia-digital/media-manager)
 
 A TALL Stack Media Manager to upload media files to multiple storages or select image from Unsplash, URL
 
@@ -15,7 +15,7 @@ https://user-images.githubusercontent.com/6707194/160046199-91dd3aa3-7687-4394-8
 You can install the package via composer:
 
 ```bash
-composer require phuclh/media-manager
+composer require omnia-digital/media-manager
 ```
 
 Add Tailwind CSS classes in `tailwind.config.js`:
@@ -24,7 +24,7 @@ Add Tailwind CSS classes in `tailwind.config.js`:
 module.exports = {
     content: [
         ...
-        './vendor/phuclh/media-manager/resources/views/**/*.blade.php',
+        './vendor/omnia-digital/media-manager/resources/views/**/*.blade.php',
     ]
 };
 ```
@@ -85,11 +85,11 @@ this.$wire.emitTo(
 ### From Livewire Component
 
 ```php
-use Phuclh\MediaManager\WithMediaManager;
+use Omnia\MediaManager\WithMediaManager;
 
 ...
 
-public function showUploader() 
+public function showUploader()
 {
     $this->showFileManager('featured-image', $file, $metadata);
 }
@@ -100,14 +100,14 @@ You can pass file URL as 2nd parameter so the Media Manager will show that file 
 ## Remove File from Media Manager
 
 ```php
-use Phuclh\MediaManager\WithMediaManager;
+use Omnia\MediaManager\WithMediaManager;
 
 ...
 
-public function removeFeaturedImage() 
+public function removeFeaturedImage()
 {
     $this->image = null;
-    
+
     $this->removeFileFromMediaManager();
 }
 ```
@@ -138,6 +138,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
+- [Josh Torres](https://github.com/joshtorres)
 - [phucle](https://github.com/phuclh)
 - [All Contributors](../../contributors)
 

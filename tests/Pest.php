@@ -1,5 +1,5 @@
 <?php
 
-use Phuclh\MediaManager\Tests\TestCase;
+use Omnia\MediaManager\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

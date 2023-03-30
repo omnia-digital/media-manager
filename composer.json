@@ -1,17 +1,23 @@
 {
-    "name": "phuclh/media-manager",
+    "name": "omnia-digital/media-manager",
     "description": "A media manager to upload media files to multiple storages or select image from Unsplash, URL",
     "keywords": [
-        "phuclh",
+        "omnia",
+        "omnia-digital",
         "laravel",
         "media-manager"
     ],
-    "homepage": "https://github.com/phuclh/media-manager",
+    "homepage": "https://github.com/omnia-digital/media-manager",
     "license": "MIT",
     "authors": [
         {
             "name": "phucle",
             "email": "phuclh93@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Josh Torres",
+            "email": "josht@omniadigital.io",
             "role": "Developer"
         }
     ],
@@ -40,12 +46,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Phuclh\\MediaManager\\": "src"
+            "Omnia\\MediaManager\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Phuclh\\MediaManager\\Tests\\": "tests"
+            "Omnia\\MediaManager\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -59,10 +65,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Phuclh\\MediaManager\\MediaManagerServiceProvider"
+                "Omnia\\MediaManager\\MediaManagerServiceProvider"
             ],
             "aliases": {
-                "MediaManager": "Phuclh\\MediaManager\\Facades\\MediaManager"
+                "MediaManager": "Omnia\\MediaManager\\Facades\\MediaManager"
             }
         }
     },

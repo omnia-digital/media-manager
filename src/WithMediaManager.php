@@ -1,6 +1,6 @@
 <?php
 
-namespace Phuclh\MediaManager;
+namespace Omnia\MediaManager;
 
 trait WithMediaManager
 {

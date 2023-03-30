@@ -1,6 +1,6 @@
 <?php
 
-namespace Phuclh\MediaManager;
+namespace Omnia\MediaManager;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
