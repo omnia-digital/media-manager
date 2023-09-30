@@ -6,15 +6,15 @@ trait WithMediaManager
 {
     public function showFileManager(string $id, ?string $file = null, array $metadata = [])
     {
-        $this->emitTo('media-manager', 'media-manager:show', [
-            'id' => $id,
-            'file' => $file,
-            'metadata' => $metadata,
-        ]);
+        $this->dispatch('media-manager:show',
+            id:$id,
+            file: $file,
+            metadata: $metadata,
+        )->to('media-manager');
     }
 
     public function removeFileFromMediaManager()
     {
-        $this->emitTo('media-manager', 'media-manager:file-removed');
+        $this->dispatch('media-manager:file-removed')->to('media-manager');
     }
 }

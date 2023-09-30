@@ -61,13 +61,13 @@ class Unsplash extends Component
     {
         $photo = $this->photos[$index];
 
-        $this->emitTo('media-manager', 'unsplash:selected', [
-            'url' => $photo['urls']['regular'],
-            'alt' => $photo['alt_description'],
-            'caption' => $this->generateCaption($photo),
-            'keyword' => $this->keyword,
-            'page' => $this->page,
-        ]);
+        $this->dispatch('unsplash:selected',
+            url: $photo['urls']['regular'],
+            alt: $photo['alt_description'],
+            caption: $this->generateCaption($photo),
+            keyword: $this->keyword,
+            page: $this->page,
+        )->to('media-manager');
     }
 
     public function handleMediaManagerBack($data)

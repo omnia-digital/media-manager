@@ -71,7 +71,7 @@ php artisan vendor:publish --tag="media-manager-views"
 ### Via Alpinejs
 
 ```js
-this.$wire.emitTo(
+this.$wire.dispatchTo(
     'media-manager',
     'media-manager:show',
     {

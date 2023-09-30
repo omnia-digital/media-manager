@@ -81,11 +81,10 @@ class MediaManager extends Component
     {
         $this->reset('file', 'metadata');
 
-        $this->emitTo(
-            $this->getChildComponentNameByCurrentTab(),
+        $this->dispatch(
             'media-manager:back',
             $this->childComponentData
-        );
+        )->to($this->getChildComponentNameByCurrentTab());
     }
 
     public function selectFile()
@@ -102,12 +101,12 @@ class MediaManager extends Component
             $this->file = is_string($this->file) ? $this->file : $this->file->temporaryUrl();
         }
 
-        $this->dispatchBrowserEvent('media-manager:file-selected', [
-            'id' => $this->childComponentId,
-            'url' => $this->file,
-            'path' => $filePath ?? $this->file,
-            'metadata' => $this->metadata,
-        ]);
+        $this->dispatch('media-manager:file-selected',
+            id: $this->childComponentId,
+            url: $this->file,
+            path: $filePath ?? $this->file,
+            metadata: $this->metadata,
+        );
 
         $this->closeModal('media-manager');
     }
