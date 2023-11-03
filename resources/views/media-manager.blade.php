@@ -16,6 +16,7 @@
                     <div class="pt-4 flex-1 flex items-stretch overflow-hidden lg:space-x-6">
                         <aside class="hidden w-72 bg-white overflow-y-auto lg:block">
                             <nav class="space-y-1" aria-label="Sidebar">
+                                <x-media-manager::sidebar-item key="media-library" icon="coolicon-unsplash" :tab="$tab"/>
                                 <x-media-manager::sidebar-item key="upload" icon="heroicon-o-upload" :tab="$tab"/>
                                 <x-media-manager::sidebar-item key="unsplash" icon="coolicon-unsplash" :tab="$tab"/>
                                 <x-media-manager::sidebar-item key="from-url" name="From URL" icon="coolicon-link-02" :tab="$tab"/>
